@@ -1,0 +1,16 @@
+/* navbar border */
+   @keyframes shine {
+          0% {
+            background-position: 0% 50%;
+          }
+          100% {
+            background-position: 200% 50%;
+          }
+        }
+        .animate-shine {
+          background-size: 200% 200%;
+          animation: shine 3s linear infinite;
+          mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+          mask-composite: exclude;
+          -webkit-mask-composite: destination-out;
+        }
