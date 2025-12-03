@@ -1,6 +1,16 @@
 import './App.css';
 import { useEffect } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  
+  return null;
+}
 import Lenis from "@studio-freight/lenis";
 import Particles from './components/3d/Particles';
 import Header from './components/Header';
@@ -57,7 +67,9 @@ function App() {
         <div className="relative z-30">
           <Header />
         </div>
-
+        
+        <ScrollToTop />
+        
         <Routes>
           <Route path="/" element={
             <>
