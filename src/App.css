@@ -49,7 +49,8 @@ html.lenis body {
 body{
   font-family: "Mogra", system-ui;
   font-weight: 400;
-  font-style: normal; 
+  font-style: normal;
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 @keyframes typewriter {
@@ -217,5 +218,47 @@ body{
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Additional responsive utilities */
+@layer utilities {
+  .text-responsive {
+    @apply text-sm sm:text-base md:text-lg lg:text-xl;
+  }
+  
+  .heading-responsive {
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl;
+  }
+  
+  .container-responsive {
+    @apply mx-4 sm:mx-6 lg:mx-10 xl:mx-20;
+  }
+  
+  .padding-responsive {
+    @apply p-3 sm:p-4 lg:p-5 xl:p-6;
+  }
+  
+  .margin-responsive {
+    @apply my-10 sm:my-16 lg:my-20 xl:my-24;
+  }
+  
+  /* Prevent horizontal overflow */
+  .prevent-overflow {
+    @apply max-w-full overflow-x-hidden;
+  }
+  
+  /* Responsive image sizing */
+  .img-responsive {
+    @apply w-full h-auto max-w-full;
+  }
+  
+  /* Mobile-first flex utilities */
+  .flex-mobile {
+    @apply flex flex-col sm:flex-row;
+  }
+  
+  .grid-mobile {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3;
   }
 }

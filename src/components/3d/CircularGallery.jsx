@@ -339,8 +339,8 @@ class ProjectCard {
     this.scale = isMobile ? this.screen.height / 1000 : this.screen.height / 1200;
     
     // Set card size - larger for content-only
-    this.mesh.scale.y = (this.viewport.height * (isMobile ? 800 : 1000) * this.scale) / this.screen.height;
-    this.mesh.scale.x = (this.viewport.width * (isMobile ? 600 : 800) * this.scale) / this.screen.width;
+    this.mesh.scale.y = (this.viewport.height * (isMobile ? 400 : 1000) * this.scale) / this.screen.height;
+    this.mesh.scale.x = (this.viewport.width * (isMobile ? 300 : 800) * this.scale) / this.screen.width;
     
     // Store original scale for hover animation
     this.originalScale.x = this.mesh.scale.x;
@@ -348,7 +348,7 @@ class ProjectCard {
     
     // Reduced padding between cards
     this.padding = isMobile ? 0.7 : 1; // Reduced from 1.8/2.2
-    this.width = this.mesh.scale.x + this.padding;
+    this.width = this.mesh.scale.x * 1.8;
     this.widthTotal = this.width * this.length;
     this.x = this.width * this.index;
   }

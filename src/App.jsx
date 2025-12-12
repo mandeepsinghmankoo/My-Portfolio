@@ -49,7 +49,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="relative min-h-[300vh] bg-black text-white overflow-hidden">
+      <div className="relative min-h-screen bg-black text-white overflow-x-hidden">
         {/* Background Particles */}
         <div className="fixed inset-0 z-0 pointer-events-none">
           <Particles
